@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArrayBlockingQueue Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header-container">
+            <h1>ArrayBlockingQueue Dashboard</h1>
+            <button id="refresh-btn">Refresh Status</button>
+        </div>
+
+        <div id="message-box" class="message-box hidden"></div>
+
+        <div class="status-board">
+            <div class="status-item">
+                <div id="size" class="status-value">-</div>
+                <div class="status-label">Current Size</div>
+            </div>
+            <div class="status-item">
+                <div id="capacity" class="status-value">-</div>
+                <div class="status-label">Total Capacity</div>
+            </div>
+            <div class="status-item">
+                <div id="remaining" class="status-value">-</div>
+                <div class="status-label">Remaining</div>
+            </div>
+        </div>
+
+        <div class="control-panel">
+            <div class="panel">
+                <h3>Enqueue Message</h3>
+                <input type="text" id="message-input" placeholder="Enter message here..." autocomplete="off">
+                <button id="enqueue-btn" class="btn-enqueue">Put (Enqueue)</button>
+            </div>
+
+            <div class="panel">
+                <h3>Dequeue Message</h3>
+                <div id="result-box" class="result-box empty">Click to poll next message</div>
+                <button id="dequeue-btn" class="btn-dequeue">Take (Dequeue)</button>
+            </div>
+        </div>
+
+        <button id="clear-btn" class="btn-clear">Clear Queue</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
